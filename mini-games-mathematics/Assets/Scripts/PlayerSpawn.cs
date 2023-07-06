@@ -9,6 +9,7 @@ public class PlayerSpawn : MonoBehaviour
     float spawnOffSet = 2.5f;
     float random;
     public bool[] playerSpawned;
+    public MiniGameQuiz miniGameQuiz;
     
     // Update is called once per frame
     void Update()
@@ -23,7 +24,7 @@ public class PlayerSpawn : MonoBehaviour
             Spawn(1);
             playerSpawned[1] = true;
         }
-        else if (!playerSpawned[2] && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow)))
+        else if (!playerSpawned[2] && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
         {
             Spawn(2);
             playerSpawned[2] = true;
@@ -38,6 +39,7 @@ public class PlayerSpawn : MonoBehaviour
             random = Random.Range(-spawnRange, spawnRange);
         }
         GameObject newPlayer = Instantiate(players[playerIndex], new Vector3(random, -3.523f, 0), Quaternion.identity);
+        MiniGameManager.Instance.RegisterPlayer(newPlayer);
     }
     private bool Overlap(float randomX)
     {

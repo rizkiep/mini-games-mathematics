@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 9162296954948352560}
   - component: {fileID: 9162296954948352567}
   - component: {fileID: 9149665760902835433}
+  - component: {fileID: -3148707189779568637}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Player
@@ -281,3 +282,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputID: 1
+--- !u!114 &-3148707189779568637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162296954948352566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dbc3d5ad1a07244b96e136a7c2452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  answerQuiz: 0
